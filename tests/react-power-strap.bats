@@ -68,3 +68,37 @@ run_script_with_input() {
   [ -d "$PROJECT_NAME/src/pages" ]
   [ -d "$PROJECT_NAME/src/components" ]
 }
+
+@test "installs Tailwind and modifies vite.config.ts correctly (TS template)" {
+  echo -e "$PROJECT_NAME\nts\ny" | bash react-power-strap.sh
+  grep -q "@tailwindcss/vite" "$PROJECT_NAME/vite.config.ts"
+  grep -q "tailwindcss()" "$PROJECT_NAME/vite.config.ts"
+}
+
+@test "adds @import 'tailwindcss'; to index.css (TS template)" {
+  echo -e "$PROJECT_NAME\nts\ny" | bash react-power-strap.sh
+  grep -q '@import "tailwindcss";' "$PROJECT_NAME/src/index.css"
+}
+
+@test "adds minimal App component to App.tsx (TS template + Tailwind)" {
+  echo -e "$PROJECT_NAME\nts\ny" | bash react-power-strap.sh
+  grep -q 'function App() {' "$PROJECT_NAME/src/App.tsx"
+  grep -q 'export default App;' "$PROJECT_NAME/src/App.tsx"
+}
+
+@test "installs Tailwind and modifies vite.config.js correctly (JS template)" {
+  echo -e "$PROJECT_NAME\njs\ny" | bash react-power-strap.sh
+  grep -q "@tailwindcss/vite" "$PROJECT_NAME/vite.config.js"
+  grep -q "tailwindcss()" "$PROJECT_NAME/vite.config.js"
+}
+
+@test "adds @import 'tailwindcss'; to index.css (JS template)" {
+  echo -e "$PROJECT_NAME\njs\ny" | bash react-power-strap.sh
+  grep -q '@import "tailwindcss";' "$PROJECT_NAME/src/index.css"
+}
+
+@test "adds minimal App component to App.jsx (JS template + Tailwind)" {
+  echo -e "$PROJECT_NAME\njs\ny" | bash react-power-strap.sh
+  grep -q 'function App() {' "$PROJECT_NAME/src/App.jsx"
+  grep -q 'export default App;' "$PROJECT_NAME/src/App.jsx"
+}
