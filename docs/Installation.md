@@ -1,25 +1,27 @@
-# Step by step instructions (if ever published on Public )
+# Installation
 
-## STEP 1
+1. **Clone the repository**:
 
-- Clone my repo:
+   ```bash
+   git clone https://github.com/24stefan/REACT-POWER-STRAP
+````
 
-```sh
-git clone https://github.com/24stefan/REACT-POWER-STRAP
-```
+2. **Navigate to the directory**:
 
-## STEP 2
-- cd into REACT-POWER-STRAP & make script executable
-```sh
-cd REACT-POWER-STRAP
-chmod +x react-power-strap.sh
-```
+   ```bash
+   cd REACT-POWER-STRAP
+   ```
 
-## STEP 3
-- Run the script:
+3. **Make the script executable**:
 
-```sh
-./react-power-strap.sh
-```
+   ```bash
+   chmod +x react-power-strap.sh
+   ```
 
+4. **Run the script**:
 
+   ```bash
+   ./react-power-strap.sh
+   ```
+
+---
