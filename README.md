@@ -23,7 +23,7 @@
 
    ```bash
    git clone https://github.com/24stefan/REACT-POWER-STRAP
-````
+```
 
 2. **Navigate to the directory**:
 
@@ -67,7 +67,7 @@ The script will then:
 
 ---
 
-## ✅ Example Output
+##  Example Output
 
 ```bash
 Enter your project name (default: front-end): my-app
